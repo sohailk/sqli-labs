@@ -2,10 +2,10 @@
 
 //give your mysql connection username n password
 $dbuser ='root';
-$dbpass ='';
+$dbpass ='kali';
 $dbname ="security";
 $host = 'localhost';
-$dbname1 = "challenges";
+$dbname1 = "security";
 
 
 
