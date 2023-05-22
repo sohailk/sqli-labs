@@ -30,9 +30,7 @@ $row = mysqli_fetch_array($result);
 	if($row)
 	{
   	echo "<font size='5' color= '#99FF00'>";
-  	echo 'Your Login name:'. $row['username'];
-  	echo "<br>";
-  	echo 'Your Password:' .$row['password'];
+  	echo 'Your Target Login name:'. $row['username'];
   	echo "</font>";
   	}
 	else 
@@ -46,7 +44,6 @@ $row = mysqli_fetch_array($result);
 
 ?>
 </font> </div></br></br></br><center>
-<img src="../images/Less-1.jpg" /></center>
 </body>
 </html>
 
