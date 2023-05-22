@@ -24,7 +24,7 @@ $id=$_GET['id'];
 
 
 $sql="SELECT * FROM users WHERE id='$id' LIMIT 0,1";
-$result=mysqli_query($sql);
+$result=mysqli_query($con, $sql);
 $row = mysqli_fetch_array($result);
 
 	if($row)
