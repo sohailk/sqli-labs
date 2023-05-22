@@ -6,7 +6,7 @@
 </head>
 
 <body bgcolor="#000000">
-<div style=" margin-top:70px;color:#FFF; font-size:23px; text-align:center">Welcome&nbsp;&nbsp;&nbsp;<font color="#FF0000"> Dhakkan </font><br>
+<div style=" margin-top:70px;color:#FFF; font-size:23px; text-align:center">Welcome&nbsp;&nbsp;&nbsp;<font color="#FF0000"> Effat PenTesting </font><br>
 <font size="3" color="#FFFF00">
 
 
@@ -18,17 +18,14 @@ error_reporting(0);
 if(isset($_GET['id']))
 {
 $id=$_GET['id'];
-//logging the connection parameters to a file for analysis.
-$fp=fopen('result.txt','a');
-fwrite($fp,'ID:'.$id."\n");
-fclose($fp);
+
 
 // connectivity 
 
 
 $sql="SELECT * FROM users WHERE id='$id' LIMIT 0,1";
-$result=mysql_query($sql);
-$row = mysql_fetch_array($result);
+$result=mysqli_query($sql);
+$row = mysqli_fetch_array($result);
 
 	if($row)
 	{
@@ -41,7 +38,7 @@ $row = mysql_fetch_array($result);
 	else 
 	{
 	echo '<font color= "#FFFF00">';
-	print_r(mysql_error());
+	print_r(mysqli_error());
 	echo "</font>";  
 	}
 }
